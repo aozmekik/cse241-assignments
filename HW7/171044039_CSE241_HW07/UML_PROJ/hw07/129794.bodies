@@ -1,0 +1,11 @@
+class Point2D
+!!!136450.java!!!	Point2D(in px : double, in py : double)
+			x = px;
+			y = py;
+!!!136578.java!!!	setPoint(in px : double, in py : double) : void
+			x = px;
+			y = py;
+!!!136706.java!!!	getX() : double
+			return x;
+!!!136834.java!!!	getY() : double
+			return y;

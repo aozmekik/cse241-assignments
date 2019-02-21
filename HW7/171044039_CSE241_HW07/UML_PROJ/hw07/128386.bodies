@@ -1,0 +1,74 @@
+class Circle
+!!!129282.java!!!	Circle(in r : double)
+	 	if(r<=0) 
+	 		throw new BadSize();
+
+		radius = r;
+		x = 0;
+		y = 0;
+
+		fill = true;
+		total_area += area();
+		total_perim += perimeter();		
+!!!129410.java!!!	Circle(in l : double, in posx : double, in posy : double)
+		this(l);
+		x = posx;
+		y = posy;
+
+!!!129538.java!!!	area() : double
+		return Math.PI*radius*radius;
+!!!129666.java!!!	perimeter() : double
+		return 2.0*Math.PI*radius;
+!!!129794.java!!!	compareTo(inout other : Shape) : int
+		
+		return Double.compare(area(),other.area()); 
+
+!!!129922.java!!!	increment() : void
+		setPosition(getX()+1,getY()+1);
+!!!130050.java!!!	decrement() : void
+		setPosition(getX()-1,getY()-1);
+!!!130178.java!!!	draw(inout g : Graphics) : void
+		// copy the Graphics object so that changes in this context
+		// will not effect outside.
+		Graphics copy = g.create();
+
+		if(getFill())
+		{
+			copy.fillOval((int)(getX()-getRadius()),(int)(getY()-getRadius()),
+			(int)(getRadius()*2.0),(int)(getRadius()*2.0));
+		}
+
+		((Graphics2D)copy).setStroke(new BasicStroke(1));
+		copy.setColor(Color.BLACK);
+		copy.drawOval((int)(getX()-getRadius()),(int)(getY()-getRadius()),
+			(int)(getRadius()*2.0),(int)(getRadius()*2.0));
+
+		copy.dispose(); // getting rid of from the copy.
+!!!130306.java!!!	getRadius() : double
+		return radius;
+!!!130434.java!!!	getX() : double
+	 	return x;
+!!!130562.java!!!	getY() : double
+	 	return y;
+!!!130690.java!!!	getFill() : boolean
+	 	return fill;
+!!!130818.java!!!	setRadius(in r : double) : void
+	 	if(r<=0) 
+	 		throw new BadSize();
+
+	 	radius = r;
+!!!130946.java!!!	setFill(inout f : boolean) : void
+	 	fill = f;		 	
+!!!131074.java!!!	setPosition(in posx : double, in posy : double) : void
+	 	x = posx;
+	 	y = posy;		 	
+!!!131202.java!!!	getTotalArea() : double
+	 	return total_area;
+!!!131330.java!!!	getTotalPerim() : double
+	 	return total_perim;
+!!!131458.java!!!	finalize() : void
+    	total_area -= area();
+    	total_perim -= perimeter();
+
+!!!131586.java!!!	clone() : Object
+    	return super.clone();

@@ -1,0 +1,25 @@
+class Triangle
+!!!147842.cpp!!!	operator ++() : Triangle
+
+		Triangle *triangle = new Triangle(*this); 
+
+		setPosition(getX()+1,getY()+1); 
+
+		return *triangle;
+!!!148098.cpp!!!	operator --() : Triangle
+
+		Triangle *triangle = new Triangle(*this); 
+
+		setPosition(getX()-1,getY()-1); 
+		
+		return *triangle;
+!!!148354.cpp!!!	getLength() : double
+return length;
+!!!148482.cpp!!!	getX() : double
+return x;
+!!!148610.cpp!!!	getY() : double
+return y;
+!!!148738.cpp!!!	getRotate() : bool
+return rotate;
+!!!148866.cpp!!!	getFill() : bool
+return fill;

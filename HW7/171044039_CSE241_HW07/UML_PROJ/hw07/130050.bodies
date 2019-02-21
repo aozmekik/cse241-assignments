@@ -1,0 +1,121 @@
+class Triangle
+!!!142722.java!!!	Triangle(in l : double)
+	 	if(l<=0) 
+	 		throw new BadSize();
+
+		length = l;
+		x = 0;
+		y = 0;
+
+		rotate = false;
+		fill = true;
+		total_area += area();
+		total_perim += perimeter();
+
+		// created point arrays for to use drawPolygon method of Graphics.  
+		xPoints = new int[3];
+		yPoints = new int[3];
+
+		
+!!!142850.java!!!	Triangle(inout triangle : Triangle)
+		xPoints = new int[3];
+		yPoints = new int[3];
+
+        length = triangle.length;
+        x = triangle.x;
+        y = triangle.y;
+        rotate = triangle.rotate;
+        fill = triangle.fill;
+
+        xPoints = xPoints != null ? Arrays.copyOf(xPoints, xPoints.length) : null;
+        yPoints = yPoints != null ? Arrays.copyOf(yPoints, yPoints.length) : null;
+
+        setPoint();
+
+!!!142978.java!!!	Triangle(in l : double, in posx : double, in posy : double)
+		this(l);
+		x = posx;
+		y = posy;
+
+		setPoint();
+
+!!!143106.java!!!	area() : double
+		// length : 2a
+		// area : (a^^2*sqrt(3))/4.
+		return Math.sqrt(Math.pow(length/2.0,2.0)*Math.sqrt(3.0))/4.0;
+!!!143234.java!!!	perimeter() : double
+		return 3.0*length;
+!!!143362.java!!!	compareTo(inout other : Shape) : int
+		
+		return Double.compare(area(),other.area()); 
+
+!!!143490.java!!!	increment() : void
+		setPosition(getX()+1,getY()+1);
+!!!143618.java!!!	decrement() : void
+		setPosition(getX()-1,getY()-1);
+!!!143746.java!!!	draw(inout g : Graphics) : void
+		// copy the Graphics object so that changes in this context
+		// will not effect outside.
+		Graphics copy = g.create();
+
+		if(getRotate()) // rotate by 180 degrees.
+		{
+			// downcasting to Graphics2D for to use rotate() method.
+			Graphics2D g2d = (Graphics2D) copy;
+			g2d.rotate(Math.toRadians(180),x,y);
+		}
+
+
+		if(getFill())
+			copy.fillPolygon(xPoints,yPoints,3);
+
+		((Graphics2D)copy).setStroke(new BasicStroke(1));
+		copy.setColor(Color.BLACK);
+		copy.drawPolygon(xPoints,yPoints,3);
+
+		copy.dispose(); // getting rid of from the copy.
+!!!143874.java!!!	getLength() : double
+		return length;
+!!!144002.java!!!	getX() : double
+	 	return x;
+!!!144130.java!!!	getY() : double
+	 	return y;
+!!!144258.java!!!	getRotate() : boolean
+	 	return rotate;
+!!!144386.java!!!	getFill() : boolean
+	 	return fill;
+!!!144514.java!!!	setLength(in l : double) : void
+	 	if(l<=0) 
+	 		throw new BadSize();
+
+	 	length = l;
+	 	setPoint();
+
+!!!144642.java!!!	setPoint() : void
+		xPoints[0] = (int)getX();
+		yPoints[0] = (int)getY();
+
+		xPoints[1] = (int)getX()-(int)(getLength()/2.0);
+		yPoints[1] = (int)getY()+(int)(Math.sqrt(3.0)*(getLength()/2.0));
+
+		xPoints[2] = (int)getX()+(int)(getLength()/2.0);
+		yPoints[2] = (int)getY()+(int)(Math.sqrt(3.0)*(getLength()/2.0));
+!!!144770.java!!!	setRotate(inout r : boolean) : void
+ 
+	 	rotate = r;
+!!!144898.java!!!	setFill(inout f : boolean) : void
+	 	fill = f;		 	
+!!!145026.java!!!	setPosition(in posx : double, in posy : double) : void
+	 	x = posx;
+	 	y = posy;
+	 	setPoint();		 	
+!!!145154.java!!!	getTotalArea() : double
+	 	return total_area;
+!!!145282.java!!!	getTotalPerim() : double
+	 	return total_perim;
+!!!145410.java!!!	finalize() : void
+    	total_area -= area();
+    	total_perim -= perimeter();
+
+!!!145538.java!!!	clone() : Object
+    	return super.clone();

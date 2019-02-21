@@ -1,0 +1,10 @@
+class Polygon
+!!!135810.java!!!	compareTo(inout other : Shape) : int
+		return Double.compare(area(),other.area()); 
+!!!136322.java!!!	Polygon(in s : int)
+
+		size = s;  
+!!!136962.java!!!	setSize(in s : int) : void
+		size = s;
+!!!137090.java!!!	getSize() : int
+		return size;

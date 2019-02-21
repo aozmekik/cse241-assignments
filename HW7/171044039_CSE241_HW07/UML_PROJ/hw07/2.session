@@ -1,0 +1,12 @@
+window_sizes 1800 922 450 1344 761 104
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128130 // Diagram
+    1147 713 100 A4 0 0
+end
+show_stereotypes
+selected class_ref 129282 // DrawPanel
+open
+  classview_ref 128130 // hw07
+end
+end

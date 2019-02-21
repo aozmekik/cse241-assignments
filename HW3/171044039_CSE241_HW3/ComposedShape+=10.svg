@@ -1,0 +1,17 @@
+<svg version="1.1"
+baseProfile="full"
+width="700" height="700" xmlns="http://www.w3.org/2000/svg">
+<polygon points="300,0 0,519.615 600,519.615" fill="white" stroke="black" stroke-width="1.6" 
+/>
+<circle cx="108.824" cy="469.615" r="50" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="208.824" cy="469.615" r="50" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="308.824" cy="469.615" r="50" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="408.824" cy="469.615" r="50" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="167.647" cy="369.615" r="50" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="267.647" cy="369.615" r="50" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="367.647" cy="369.615" r="50" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="226.471" cy="269.615" r="50" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="326.471" cy="269.615" r="50" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="285.294" cy="169.615" r="50" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="50" cy="50" r="50" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+ </svg>

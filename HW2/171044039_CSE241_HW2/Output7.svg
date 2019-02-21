@@ -1,0 +1,35 @@
+<svg version="1.1"
+baseProfile="full"
+width="900" height="900" xmlns="http://www.w3.org/2000/svg">
+<polygon points="400,0 0,692.82 800,692.82" fill="white"  stroke="black" stroke-width="1.6" 
+/>
+<circle cx="93.5882" cy="649.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="179.588" cy="649.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="265.588" cy="649.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="351.588" cy="649.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="437.588" cy="649.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="523.588" cy="649.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="609.588" cy="649.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="695.588" cy="649.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="144.176" cy="563.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="230.176" cy="563.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="316.176" cy="563.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="402.176" cy="563.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="488.176" cy="563.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="574.176" cy="563.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="194.765" cy="477.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="280.765" cy="477.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="366.765" cy="477.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="452.765" cy="477.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="538.765" cy="477.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="245.353" cy="391.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="331.353" cy="391.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="417.353" cy="391.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="503.353" cy="391.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="295.941" cy="305.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="381.941" cy="305.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="467.941" cy="305.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="346.529" cy="219.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="432.529" cy="219.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="397.118" cy="133.82" r="43" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+ </svg>

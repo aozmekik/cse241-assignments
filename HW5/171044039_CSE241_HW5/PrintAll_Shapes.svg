@@ -1,0 +1,9 @@
+<svg version="1.1"
+baseProfile="full"
+width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+<rect width="50" height="100" y="200" x="100" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>/>
+<polygon points="401,401 365.5,462.488 436.5,462.488" fill="cornflowerblue" stroke="black" stroke-width="1.6" 
+/>
+<circle cx="600" cy="600" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+
+</svg>

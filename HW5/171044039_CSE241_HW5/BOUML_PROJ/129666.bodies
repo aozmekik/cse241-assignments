@@ -1,0 +1,86 @@
+class PolygonVect
+!!!140674.cpp!!!	PolygonVect(in rectangle : Rectangle)
+		point.reserve(getSize()); /* 4 points reserved in vector */
+		area = rectangle.getArea();
+		perim = rectangle.getPerim();
+
+		const double x = rectangle.getX();
+		const double y = rectangle.getY();
+
+		// Drawing route: 
+		/* (x,y) left-most corner-> go to right -> go down -> then go left */ 
+		point.push_back(Polygon::Point2D(x,y));
+		point.push_back(Polygon::Point2D(x+rectangle.getWidth(),y));
+		point.push_back(Polygon::Point2D(x+rectangle.getWidth(),y+rectangle.getHeight()));
+		point.push_back(Polygon::Point2D(x,y+rectangle.getHeight()));
+!!!140802.cpp!!!	PolygonVect(in circle : Circle)
+		point.reserve(getSize()); /* 100 equal interval reserved in vector for circle*/
+		area = circle.getArea();
+		perim = circle.getPerim();
+
+		const double PI = 3.14159; //value of pi to determine circle's point.
+		double x=0.0,y=0.0; // coord. 
+
+		for(int i=0;i<getSize();++i)
+		{
+
+			x = circle.getX() + cos(2.0*i*PI/getSize())*circle.getRadius();
+			y = circle.getY() + sin(2.0*i*PI/getSize())*circle.getRadius();
+			point.push_back(Polygon::Point2D(x,y));
+		}	
+
+!!!140930.cpp!!!	PolygonVect(in triangle : Triangle)
+		point.reserve(getSize()); /* 3 points for 3 corners */
+		area = triangle.getArea();
+		perim = triangle.getPerim();
+
+		const double x = triangle.getX();
+		const double y = triangle.getY();
+
+		//Drawing route:
+		/* (x,y) top corner -> go to down and right -> go left */
+		point.push_back(Polygon::Point2D(x,y));
+		if(triangle.getRotate())
+		{
+			point.push_back(Polygon::Point2D(x+triangle.getLength()/2.0, // (x+len/2,y+(3^1/2)*len/2)
+							 y-triangle.getLength()*sqrt(3)/2.0)); 
+			point.push_back(Polygon::Point2D(x-triangle.getLength()/2.0, // (x-len/2,y+(3^1/2)*len/2)
+							 y-triangle.getLength()*sqrt(3)/2.0));
+		}
+		else
+		{
+			point.push_back(Polygon::Point2D(x+triangle.getLength()/2.0, // (x+len/2,y+(3^1/2)*len/2)
+								 y+triangle.getLength()*sqrt(3)/2.0)); 
+			point.push_back(Polygon::Point2D(x-triangle.getLength()/2.0, // (x-len/2,y+(3^1/2)*len/2)
+							 y+triangle.getLength()*sqrt(3)/2.0));
+		}
+!!!141058.cpp!!!	PolygonVect(inout shape : Shape)
+		/* Possible downcast cases */
+		Rectangle *r;
+		Triangle  *t;
+		Circle    *c;
+
+		// downcast try.
+		if(r = dynamic_cast<Rectangle*>(shape))
+			*this = PolygonVect(*r);
+		else if(t = dynamic_cast<Triangle*>(shape))
+			*this = PolygonVect(*t);
+		else if(c = dynamic_cast<Circle*>(shape))
+			*this = PolygonVect(*c);
+		else throw bad_shape();
+
+!!!141186.cpp!!!	PolygonVect()
+/* body left intentionally blank */
+!!!142082.cpp!!!	operator ++() : PolygonVect
+		PolygonVect *poly_vect = new PolygonVect(*this);
+		for(auto p : point)
+			p.setPoint(p.getX()+1,p.getY()+1);
+
+		return *poly_vect;
+
+!!!142338.cpp!!!	operator --() : PolygonVect
+		PolygonVect *poly_vect = new PolygonVect(*this);
+		for(auto p : point)
+			p.setPoint(p.getX()-1,p.getY()-1);
+
+		return *poly_vect;

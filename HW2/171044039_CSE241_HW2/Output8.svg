@@ -1,0 +1,168 @@
+<svg version="1.1"
+baseProfile="full"
+width="900" height="900" xmlns="http://www.w3.org/2000/svg">
+<polygon points="400,0 0,692.82 800,692.82" fill="white"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="43.5,617.476 0,692.82 87,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="130.5,617.476 87,692.82 174,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="217.5,617.476 174,692.82 261,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="304.5,617.476 261,692.82 348,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="391.5,617.476 348,692.82 435,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="478.5,617.476 435,692.82 522,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="565.5,617.476 522,692.82 609,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="652.5,617.476 609,692.82 696,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="739.5,617.476 696,692.82 783,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="87,542.132 43.5,617.476 130.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="174,542.132 130.5,617.476 217.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="261,542.132 217.5,617.476 304.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="348,542.132 304.5,617.476 391.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="435,542.132 391.5,617.476 478.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="522,542.132 478.5,617.476 565.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="609,542.132 565.5,617.476 652.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="696,542.132 652.5,617.476 739.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="130.5,466.788 87,542.132 174,542.132" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="217.5,466.788 174,542.132 261,542.132" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="304.5,466.788 261,542.132 348,542.132" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="391.5,466.788 348,542.132 435,542.132" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="478.5,466.788 435,542.132 522,542.132" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="565.5,466.788 522,542.132 609,542.132" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="652.5,466.788 609,542.132 696,542.132" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="174,391.443 130.5,466.788 217.5,466.788" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="261,391.443 217.5,466.788 304.5,466.788" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="348,391.443 304.5,466.788 391.5,466.788" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="435,391.443 391.5,466.788 478.5,466.788" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="522,391.443 478.5,466.788 565.5,466.788" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="609,391.443 565.5,466.788 652.5,466.788" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="217.5,316.099 174,391.443 261,391.443" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="304.5,316.099 261,391.443 348,391.443" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="391.5,316.099 348,391.443 435,391.443" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="478.5,316.099 435,391.443 522,391.443" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="565.5,316.099 522,391.443 609,391.443" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="261,240.755 217.5,316.099 304.5,316.099" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="348,240.755 304.5,316.099 391.5,316.099" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="435,240.755 391.5,316.099 478.5,316.099" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="522,240.755 478.5,316.099 565.5,316.099" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="304.5,165.411 261,240.755 348,240.755" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="391.5,165.411 348,240.755 435,240.755" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="478.5,165.411 435,240.755 522,240.755" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="348,90.0666 304.5,165.411 391.5,165.411" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="435,90.0666 391.5,165.411 478.5,165.411" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="391.5,14.7224 348,90.0666 435,90.0666" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+/>
+<polygon points="87,692.82 43.5,768.165 130.5,768.165" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,87,692.82)"/>
+<polygon points="174,692.82 130.5,768.165 217.5,768.165" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,174,692.82)"/>
+<polygon points="261,692.82 217.5,768.165 304.5,768.165" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,261,692.82)"/>
+<polygon points="348,692.82 304.5,768.165 391.5,768.165" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,348,692.82)"/>
+<polygon points="435,692.82 391.5,768.165 478.5,768.165" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,435,692.82)"/>
+<polygon points="522,692.82 478.5,768.165 565.5,768.165" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,522,692.82)"/>
+<polygon points="609,692.82 565.5,768.165 652.5,768.165" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,609,692.82)"/>
+<polygon points="696,692.82 652.5,768.165 739.5,768.165" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,696,692.82)"/>
+<polygon points="130.5,617.476 87,692.82 174,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,130.5,617.476)"/>
+<polygon points="217.5,617.476 174,692.82 261,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,217.5,617.476)"/>
+<polygon points="304.5,617.476 261,692.82 348,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,304.5,617.476)"/>
+<polygon points="391.5,617.476 348,692.82 435,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,391.5,617.476)"/>
+<polygon points="478.5,617.476 435,692.82 522,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,478.5,617.476)"/>
+<polygon points="565.5,617.476 522,692.82 609,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,565.5,617.476)"/>
+<polygon points="652.5,617.476 609,692.82 696,692.82" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,652.5,617.476)"/>
+<polygon points="174,542.132 130.5,617.476 217.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,174,542.132)"/>
+<polygon points="261,542.132 217.5,617.476 304.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,261,542.132)"/>
+<polygon points="348,542.132 304.5,617.476 391.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,348,542.132)"/>
+<polygon points="435,542.132 391.5,617.476 478.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,435,542.132)"/>
+<polygon points="522,542.132 478.5,617.476 565.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,522,542.132)"/>
+<polygon points="609,542.132 565.5,617.476 652.5,617.476" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,609,542.132)"/>
+<polygon points="217.5,466.788 174,542.132 261,542.132" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,217.5,466.788)"/>
+<polygon points="304.5,466.788 261,542.132 348,542.132" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,304.5,466.788)"/>
+<polygon points="391.5,466.788 348,542.132 435,542.132" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,391.5,466.788)"/>
+<polygon points="478.5,466.788 435,542.132 522,542.132" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,478.5,466.788)"/>
+<polygon points="565.5,466.788 522,542.132 609,542.132" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,565.5,466.788)"/>
+<polygon points="261,391.443 217.5,466.788 304.5,466.788" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,261,391.443)"/>
+<polygon points="348,391.443 304.5,466.788 391.5,466.788" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,348,391.443)"/>
+<polygon points="435,391.443 391.5,466.788 478.5,466.788" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,435,391.443)"/>
+<polygon points="522,391.443 478.5,466.788 565.5,466.788" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,522,391.443)"/>
+<polygon points="304.5,316.099 261,391.443 348,391.443" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,304.5,316.099)"/>
+<polygon points="391.5,316.099 348,391.443 435,391.443" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,391.5,316.099)"/>
+<polygon points="478.5,316.099 435,391.443 522,391.443" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,478.5,316.099)"/>
+<polygon points="348,240.755 304.5,316.099 391.5,316.099" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,348,240.755)"/>
+<polygon points="435,240.755 391.5,316.099 478.5,316.099" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,435,240.755)"/>
+<polygon points="391.5,165.411 348,240.755 435,240.755" fill="cornflowerblue"  stroke="black" stroke-width="1.6" 
+ transform = " rotate(180,391.5,165.411)"/>
+ </svg>

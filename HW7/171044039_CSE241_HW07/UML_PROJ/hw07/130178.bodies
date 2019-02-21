@@ -1,0 +1,97 @@
+class PolygonVect
+!!!138370.java!!!	PolygonVect(inout shape : Shape)
+		super(1); // init size with 1. 
+		point = new ArrayList<Polygon.Point2D>();
+		if(shape instanceof Rectangle)		
+			setPolygon((Rectangle)shape);
+		else if(shape instanceof Circle)
+			setPolygon((Circle)shape);
+		else if(shape instanceof Triangle) // Triangle.
+			setPolygon((Triangle)shape);
+		
+!!!138498.java!!!	area() : double
+		return _area;
+!!!138626.java!!!	perimeter() : double
+		return _perim;
+!!!138754.java!!!	increment() : void
+		for(Polygon.Point2D p : point)
+			p.setPoint(p.getX()+1,p.getY()+1);
+
+!!!138882.java!!!	decrement() : void
+		for(Polygon.Point2D p : point)
+			p.setPoint(p.getX()-1,p.getY()-1);
+!!!139010.java!!!	draw(inout g : Graphics) : void
+		// copy the Graphics object so that changes in this context
+		// will not effect outside.
+		Graphics copy = g.create();
+
+		int[] xPoints = new int[getSize()];
+		int[] yPoints = new int[getSize()];
+
+		// parsing the point2D for to use methods in Graphics.
+		for(int i=0;i<getSize();++i) 
+		{
+			xPoints[i] = (int)point.get(i).getX();
+			yPoints[i] = (int)point.get(i).getY();
+		}
+
+		copy.fillPolygon(xPoints,yPoints,getSize());
+
+		((Graphics2D)copy).setStroke(new BasicStroke(1));
+		copy.setColor(Color.BLACK);
+		copy.drawPolygon(xPoints,yPoints,getSize());
+
+		copy.dispose(); // getting rid of from the copy.
+!!!139138.java!!!	setPolygon(inout rectangle : Rectangle) : void
+		setSize(4);
+		_area = rectangle.area();
+		_perim = rectangle.perimeter();
+
+		final double x = rectangle.getX();
+		final double y = rectangle.getY();
+
+		// Drawing route: 
+		/* (x,y) left-most corner-> go to right -> go down -> then go left */ 
+		point.add(new Polygon.Point2D(x,y));
+		point.add(new Polygon.Point2D(x+rectangle.getWidth(),y));
+		point.add(new Polygon.Point2D(x+rectangle.getWidth(),y+rectangle.getHeight()));
+		point.add(new Polygon.Point2D(x,y+rectangle.getHeight()));
+!!!139266.java!!!	setPolygon(inout circle : Circle) : void
+		setSize(100);
+		_area = circle.area();
+		_perim = circle.perimeter();
+
+		double x=0.0,y=0.0; // coord. 
+
+		for(int i=0;i<getSize();++i)
+		{
+
+			x = circle.getX() + Math.cos(2.0*i*Math.PI/getSize())*circle.getRadius();
+			y = circle.getY() + Math.sin(2.0*i*Math.PI/getSize())*circle.getRadius();
+			point.add(new Polygon.Point2D(x,y));
+		}	
+!!!139394.java!!!	setPolygon(inout triangle : Triangle) : void
+		setSize(3);
+		_area = triangle.area();
+		_perim = triangle.perimeter();
+
+		final double x = triangle.getX();
+		final double y = triangle.getY();
+
+		//Drawing route:
+		/* (x,y) top corner -> go to down and right -> go left */
+		point.add(new Polygon.Point2D(x,y));
+		if(triangle.getRotate())
+		{
+			point.add(new Polygon.Point2D(x+triangle.getLength()/2.0, // (x+len/2,y+(3^1/2)*len/2)
+							 y-triangle.getLength()*Math.sqrt(3)/2.0)); 
+			point.add(new Polygon.Point2D(x-triangle.getLength()/2.0, // (x-len/2,y+(3^1/2)*len/2)
+							 y-triangle.getLength()*Math.sqrt(3)/2.0));
+		}
+		else
+		{
+			point.add(new Polygon.Point2D(x+triangle.getLength()/2.0, // (x+len/2,y+(3^1/2)*len/2)
+								 y+triangle.getLength()*Math.sqrt(3)/2.0)); 
+			point.add(new Polygon.Point2D(x-triangle.getLength()/2.0, // (x-len/2,y+(3^1/2)*len/2)
+							 y+triangle.getLength()*Math.sqrt(3)/2.0));
+		}

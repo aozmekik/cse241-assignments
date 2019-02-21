@@ -1,0 +1,8 @@
+class BadSize
+!!!128130.java!!!	BadSize()
+ super();
+!!!128258.java!!!	BadSize(in msg : String)
+ super(msg);
+!!!128386.java!!!	toString() : String
+ 
+		return new String("Negative value or zero was given for size!"); 

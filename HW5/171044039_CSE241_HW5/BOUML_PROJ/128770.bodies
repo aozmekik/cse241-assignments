@@ -1,0 +1,33 @@
+class Rectangle
+!!!142722.cpp!!!	getWidth() : double
+return width;
+!!!142850.cpp!!!	getHeight() : double
+return height;
+!!!142978.cpp!!!	getX() : double
+return x;
+!!!143106.cpp!!!	getY() : double
+return y;
+!!!143234.cpp!!!	getRotate() : bool
+return rotate;
+!!!143362.cpp!!!	getFill() : bool
+return fill;
+!!!144130.cpp!!!	swapEdges() : void
+		// basic swaping operation
+		double temp;
+		temp = getWidth();
+		setWidth(getHeight());
+		setHeight(temp);
+!!!144258.cpp!!!	operator ++() : Rectangle
+
+		Rectangle *rectangle = new Rectangle(*this); 
+
+		setPosition(getX()+1,getY()+1); /* update this */
+
+		return *rectangle;
+!!!144514.cpp!!!	operator --() : Rectangle
+
+		Rectangle *rectangle = new Rectangle(*this); 
+
+		setPosition(getX()-1,getY()-1); /* update this */
+		
+		return *rectangle;

@@ -1,0 +1,466 @@
+class ComposedShape
+!!!130306.cpp!!!	ComposedShape(in _r1 : Rectangle, in _r2 : Rectangle)
+		r1.setHeader(false);
+		r2.setHeader(false);
+		setHeader(true);
+		findBoundingBox();
+!!!130434.cpp!!!	ComposedShape(in _r1 : Rectangle, in _c2 : Circle)
+		r1.setHeader(false);
+		c2.setHeader(false);
+		setHeader(true);
+		findBoundingBox();
+!!!130562.cpp!!!	ComposedShape(in _r1 : Rectangle, in _t2 : Triangle)
+		r1.setHeader(false);
+		t2.setHeader(false);
+		setHeader(true);
+		findBoundingBox();
+!!!130690.cpp!!!	ComposedShape(in _c1 : Circle, in _r2 : Rectangle)
+		r2.setHeader(false);
+		c1.setHeader(false);
+		setHeader(true);
+		findBoundingBox();
+!!!130818.cpp!!!	ComposedShape(in _c1 : Circle, in _c2 : Circle)
+		c1.setHeader(false);
+		c2.setHeader(false);
+		setHeader(true);
+		findBoundingBox();
+!!!130946.cpp!!!	ComposedShape(in _c1 : Circle, in _t2 : Triangle)
+		c1.setHeader(false);
+		c2.setHeader(false);
+		setHeader(true);
+		findBoundingBox();
+!!!131074.cpp!!!	ComposedShape(in _t1 : Triangle, in _r2 : Rectangle)
+		r2.setHeader(false);
+		t1.setHeader(false);
+		setHeader(true);
+		findBoundingBox();
+		
+
+!!!131202.cpp!!!	ComposedShape(in _t1 : Triangle, in _c2 : Circle)
+		c2.setHeader(false);
+		t1.setHeader(false);
+		setHeader(true);
+		findBoundingBox();
+!!!131330.cpp!!!	ComposedShape(in _t1 : Triangle, in _t2 : Triangle)
+		t1.setHeader(false);
+		t2.setHeader(false);
+		setHeader(true);
+		findBoundingBox();
+!!!131458.cpp!!!	ComposedShape()
+/* Body intentionally left empty */
+!!!132354.cpp!!!	getBoxWidth() : double
+ return box_w;
+!!!132482.cpp!!!	getBoxHeight() : double
+ return box_h;
+!!!132866.cpp!!!	optimalFit() : void
+		switch(main_shape)
+		{
+			case shape_enum::rect: 
+				switch(small_shape)
+				{
+					case shape_enum::rect: shape = fitRinR();break;
+					case shape_enum::cir:  shape = fitCinR();break;
+					case shape_enum::tri:  shape = fitTinR();break;
+				}break;
+
+			case shape_enum::cir:
+				switch(small_shape)
+				{
+					case shape_enum::rect: shape = fitRinC();break;
+					case shape_enum::cir:  shape = fitCinC();break;
+					case shape_enum::tri:  shape = fitTinC();break;
+				}break;
+
+			case shape_enum::tri:
+				switch(small_shape)
+				{
+					case shape_enum::rect: shape = fitRinT();break;
+					case shape_enum::cir:  shape = fitCinT();break;
+					case shape_enum::tri:  shape = fitTinT();break;
+				}break;
+		}
+!!!133122.cpp!!!	operator ++() : ComposedShape
+
+		ComposedShape *composed = new ComposedShape(*this); 
+
+		setPosition(_x+1,_y+1); 
+
+		return *composed;
+!!!133378.cpp!!!	operator --() : ComposedShape
+
+		ComposedShape *composed = new ComposedShape(*this); 
+
+		setPosition(_x-1,_y-1); /* update this */
+		
+		return *composed;
+!!!134146.cpp!!!	findBoundingBox() : void
+		// doubled the box to prevent the worst case for circle
+		switch(main_shape)
+		{
+			case shape_enum::rect:  
+				setBoxWidth(r1.getWidth()); 
+				setBoxHeight(r1.getHeight());   
+				break;
+
+			case shape_enum::cir:
+				setBoxWidth(c1.getRadius()*2.0); // doubled for full view of circle
+				setBoxHeight(c1.getRadius()*2.0);   
+				break;  
+			 
+			case shape_enum::tri:   
+				setBoxWidth(t1.getLength()); 
+				setBoxHeight(t1.getLength());   
+		}
+
+		// expanding our box to see the strokes of border edges
+		setBoxWidth(getBoxWidth()+100.0);
+		setBoxHeight(getBoxHeight()+100.0);
+!!!134274.cpp!!!	fitRinR() : std::vector<Shape*>
+ 
+		Rectangle r(r2); // Temp small shape which we will work on.
+		std::vector<Shape*> _shape; // Small shapes. 
+		double x,y; // temp positions which we will find later on for small shapes.    
+
+		r.setFill(true); // small shapes will have color.
+
+		// We determine which filling(rotate or not) is better for optimization. 
+		if(totalRinR(r1.getWidth(),r1.getHeight(), r2) < 
+		   totalRinR(r1.getHeight(),r1.getWidth(), r2))
+		{
+			r.swapEdges(); 
+		}
+
+		// Starting to fill from(a,b) to (max,b) without rotating.
+		// (_x,_y) counters represent position.
+		r.setRotate(false);
+		for(x=0.0; x<=r1.getWidth()-r.getWidth();x+=r.getWidth())
+		{
+			for(y=0.0; y<=r1.getHeight()-r.getHeight(); y+=r.getHeight())
+			{
+				// (x,y) determined due to (0,0). We must add  
+				// container's coordinates to shift to exact position.   
+				r.setPosition(_x+x,_y+y);
+				_shape.push_back(new Rectangle(r));
+			}
+		}
+
+		// Keep filling from(a,max) to (max,max) with rotating.
+		r.setRotate(true);
+		bool filled=false; // to check if we filled any with this try.
+		for(y=0.0,
+			x=r.getWidth()*(double)((int)r1.getWidth()/(int)r.getWidth())+r.getHeight();	
+									  x<= r1.getWidth() && y<=r1.getHeight()-r.getWidth();
+																		   y+=r.getWidth())
+		{	
+			r.setPosition(_x+x,_y+y);
+			_shape.push_back(new Rectangle(r));
+			filled=true;
+		}
+
+		// Try to fill with rotating from different position.
+		if(!filled)
+		{
+			for(y=r.getHeight()*(double)((int)r1.getHeight()/(int)r.getHeight());
+										y<r1.getHeight()-r.getWidth(); y+=r.getWidth())
+			{
+				for(x=0;x<=r1.getWidth()-r.getHeight();x+=r.getHeight())
+				{
+					r.setPosition(_x+x,_y+y);
+					_shape.push_back(new Rectangle(r));
+				}
+				r.setPosition(_x+x,_y+y);
+				_shape.push_back(new Rectangle(r));
+			}
+		}
+
+		return _shape;
+
+!!!134402.cpp!!!	fitRinC() : std::vector<Shape*>
+		// We fill the imaginary inner rectangles which inside of circle with small rectangles.
+		// To do this we must create a composition with rectangular main container.
+		// We copy the circle object to shift the wanted area of cartesian coordinate
+		// system for better use of circle functions. 
+		Rectangle inner_r,r(r2);
+		Circle c(c1); 
+		ComposedShape inner_shape(inner_r,r);
+		std::vector<Shape*> _shape;
+		double x=0.0,y=0.0; 
+
+		c.setPosition(c.getRadius()/sqrt(2.0),c.getRadius()/sqrt(2.0));
+
+		y = c.getY()+c.getRadius();
+
+		if(r.getWidth()>r.getHeight())
+			r.swapEdges();
+			
+		
+		inner_r.setHeight(r.getWidth());
+		
+
+		while(x<c.getX())
+		{
+			y -= inner_r.getHeight();
+			x = circleFunc(y,c,true);
+
+			inner_r.setWidth(circleFunc(y,c,false) - x);
+
+			while(!isInsideCircle(x,y+inner_r.getHeight(),c))
+			{
+				y-=.3;
+				x++;
+				inner_r.setWidth(inner_r.getWidth()-2.0);
+			}
+			// Update the composition.
+			r.setPosition(x+_x,y+_y);
+			// Concatenate two vectors.
+			appendComposition(inner_shape,inner_r,r,_shape);
+			
+		}
+
+		return _shape;
+
+!!!134530.cpp!!!	fitRinT() : std::vector<Shape*>
+		// Yet another imaginary composition created. 
+		// We again, find the optimal rectangles inside the triangle,
+		// Then make them our container, so that we can use fitRinR func.
+		Rectangle inner_r,r(r2);
+		ComposedShape inner_shape(inner_r,r);
+		std::vector<Shape*> _shape;
+
+		double x,y;
+
+		x = 0.0;
+		y = t1.getLength()/2.0*sqrt(3.0);
+
+		// short length of rect is the height of inner rect which we will fill in.   
+		if(r.getWidth()>r.getHeight())
+			r.swapEdges();
+		
+		
+		inner_r.setHeight(r.getWidth());
+		inner_r.setWidth (t1.getLength());
+
+		while(x<=t1.getLength()/2.0 && inner_r.getWidth()- 2*inner_r.getHeight()/1.7 >0)
+		{
+			
+			// Updates: 
+			// Rctangle width gets smaller by it's height.
+			// Position of rectangle goes top right 
+			// magic number 1.7 is calculated from eq.triangle,
+			// for to calculate inner rectangle's starter point and length
+
+			y-=inner_r.getHeight();
+			x+=inner_r.getHeight()/1.7;
+			inner_r.setWidth(inner_r.getWidth()- 2*inner_r.getHeight()/1.7);
+
+			r.setPosition(x+_x,y+_y);
+			appendComposition(inner_shape,inner_r,r,_shape);
+
+		} 
+		return _shape;
+!!!134658.cpp!!!	fitCinR() : std::vector<Shape*>
+		std::vector<Shape*> _shape;
+		Circle c(c2);
+		double x,y;
+
+		// pretty straight forward filling with starting from (r,r) 
+		c.setFill(true);
+		for(y=c.getRadius();y<=r1.getHeight()-c.getRadius();y+=2.0*c.getRadius())
+		{
+			for(x=c.getRadius();x<=r1.getWidth()-c.getRadius();x+=2.0*c.getRadius())
+			{
+				c.setPosition(x+_x,y+_y);
+				_shape.push_back(new Circle(c));
+			}
+		}
+
+		return _shape;
+!!!134786.cpp!!!	fitCinC() : std::vector<Shape*>
+		Rectangle inner_r;
+		Circle main_c(c1),small_c(c2);
+		ComposedShape inner_shape(inner_r,small_c);
+		std::vector<Shape*> _shape;
+		double x,y;
+
+		main_c.setPosition(c1.getRadius()/sqrt(2.0),c1.getRadius()/sqrt(2.0));
+
+		y = main_c.getY() + main_c.getRadius();
+		inner_r.setHeight(small_c.getRadius()*2.0);
+	 
+		while(x<main_c.getX())
+		{
+			y -= small_c.getRadius()*2.0;
+			x = circleFunc(y,main_c,true);
+
+			inner_r.setWidth(circleFunc(y,main_c,false) - x);
+
+			// the above half of the center requires some updates:
+			// such as controlling overflow 
+			if(y>=main_c.getX())
+			{
+				x+=2.0*small_c.getRadius();
+				inner_r.setWidth(inner_r.getWidth()- 3.5*small_c.getRadius());
+
+				while(!isInsideCircle(x,y+2.0*c2.getRadius(),main_c))
+				{
+					y--;
+					x++;
+					inner_r.setWidth(inner_r.getWidth()-1);
+				}
+			}
+
+			small_c.setPosition(x+_x,y+_y);
+			appendComposition(inner_shape,inner_r,small_c,_shape);
+		}
+
+		return _shape;
+!!!134914.cpp!!!	fitCinT() : std::vector<Shape*>
+		Rectangle inner_r;
+		Circle c(c2);
+		ComposedShape inner_shape(inner_r,c);
+		std::vector<Shape*> _shape;
+		double x,y; // position of inner rectangle 
+
+		x = 0.0;
+		y = t1.getLength()/2.0*sqrt(3.0);
+
+		// smallest square that circle can fit in 
+		inner_r.setWidth(t1.getLength());
+		inner_r.setHeight(2*c.getRadius());
+
+		// same algorithm which we used in fitRinT:
+		// after we set our inner rectangle, we fill the rectangle with circle
+		while(x<=t1.getLength()/2.0 && inner_r.getWidth()-2*inner_r.getHeight()/1.7>0)
+		{
+			y-=inner_r.getHeight();
+			x+=inner_r.getHeight()/1.7;
+			inner_r.setWidth(inner_r.getWidth()-2*inner_r.getHeight()/1.7); 
+
+			c.setPosition(x+_x,y+_y);
+			appendComposition(inner_shape,inner_r,c,_shape);
+		 
+		} 
+
+		return _shape;
+!!!135042.cpp!!!	fitTinR() : std::vector<Shape*>
+		Triangle t(t2); 
+		std::vector<Shape*> _shape;
+		double x,y;
+		double tri_height = sqrt(3.0)*t.getLength()/2.0;
+
+		t.setFill(true);
+
+		// (a,width-a*sqrt(3)) init for fill inside without rotating  
+		for(y = r1.getHeight()-tri_height;y>=0;y-=tri_height)
+		{
+			x=t.getLength()/2.0;
+			while(x+t.getLength()/2.0<=r1.getWidth())
+			{
+				t.setPosition(x+_x,y+_y);
+				_shape.push_back(new Triangle(t));
+				x+=t.getLength();
+			}	
+		}
+		
+		// (2a,width)init for fill inside with rotating
+		t.setRotate(true);
+		for(y = r1.getHeight();y-tri_height>=0;y-=tri_height)
+		{
+			x = t.getLength();
+			while(x+t.getLength()/2.0<=r1.getWidth())
+			{
+				
+				t.setPosition(x+_x,y+_y);
+				_shape.push_back(new Triangle(t));
+				x += t.getLength();
+			}
+		}
+
+		return _shape;
+
+!!!135170.cpp!!!	fitTinC() : std::vector<Shape*>
+		Rectangle inner_r;
+		Triangle t(t2);
+		Circle c(c1);
+		ComposedShape inner_shape(inner_r,t);
+		std::vector<Shape*> _shape;
+		double x,y;
+
+		c.setPosition(c.getRadius()/sqrt(2.0),c.getRadius()/sqrt(2.0));
+
+		inner_r.setHeight(sqrt(3.0)*t.getLength()/2.0);
+
+		x=0.0;
+		y=c.getY()+c.getRadius();
+
+		while(x<c.getX())
+		{
+			y -= inner_r.getHeight();
+			x = circleFunc(y,c,true);
+
+			inner_r.setWidth(circleFunc(y,c,false)-x);
+
+			while(!isInsideCircle(x,y+inner_r.getHeight(),c))
+			{
+				y-=.3;
+				x++;
+				inner_r.setWidth(inner_r.getWidth()-1.8);
+			}
+
+			t.setPosition(x+_x,y+_y);
+			appendComposition(inner_shape,inner_r,t,_shape);
+
+		}
+
+		return _shape;
+!!!135298.cpp!!!	fitTinT() : std::vector<Shape*>
+		Triangle main_t(t1),small_t(t2);
+		double x,y;
+		double main_h, small_h;  // h of big main triangle
+		std::vector<Shape*> _shape;
+
+		main_h = sqrt(3.0)*main_t.getLength()/2.0;
+		small_h = sqrt(3.0)*small_t.getLength()/2.0;
+
+		small_t.setFill(true);
+
+		x=0.0;
+		y=main_h;
+
+		int i=1;
+		double width=main_t.getLength();
+		for(y = main_h-small_h; y>=0; y-= small_h)
+		{
+			x = i*small_t.getLength()/2.0;
+			small_t.setPosition(x+_x,y+_y);
+			++i;
+			while(x+small_t.getLength()/2.0<=width)
+			{
+				_shape.push_back(new Triangle(small_t));
+				x += small_t.getLength(); 
+				small_t.setPosition(x+_x,y+_y);
+			}
+
+			width-=small_t.getLength()/2.0;
+		
+		}
+
+		small_t.setRotate(true);
+		i=2;
+		width=main_t.getLength()-small_t.getLength()/2.0;
+		for(y = main_h; y-small_h>=0; y-= small_h)
+		{
+			x = i*small_t.getLength()/2.0;
+			small_t.setPosition(x+_x,y+_y);
+			++i;
+			while(x+small_t.getLength()/2.0<=width)
+			{
+				_shape.push_back(new Triangle(small_t));
+				x+= small_t.getLength();
+				small_t.setPosition(x+_x,y+_y);
+			}
+
+			width-=small_t.getLength()/2.0;
+		}
+
+		return _shape;

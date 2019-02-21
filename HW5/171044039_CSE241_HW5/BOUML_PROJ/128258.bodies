@@ -1,0 +1,9 @@
+class Shape
+!!!145410.cpp!!!	Shape()
+/* intentionally left blank */
+!!!146178.cpp!!!	getArea() : double
+return area;
+!!!146306.cpp!!!	getPerim() : double
+return perim;
+!!!146434.cpp!!!	getHeader() : bool
+return header;

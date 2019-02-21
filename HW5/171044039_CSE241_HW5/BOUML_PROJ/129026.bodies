@@ -1,0 +1,3 @@
+class Polygon
+!!!137858.cpp!!!	getSize() : int
+return size;

@@ -1,0 +1,18 @@
+class PolygonDyn
+!!!138370.cpp!!!	PolygonDyn()
+/* intentionally left blank */
+!!!139010.cpp!!!	~PolygonDyn()
+		delete[] point;
+!!!139778.cpp!!!	operator ++() : PolygonDyn
+		PolygonDyn *poly_dyn = new PolygonDyn(*this);
+		for(int i=0;i<getSize();++i)
+			point[i].setPoint(point[i].getX()+1,point[i].getY()+1);
+
+		return *poly_dyn;
+
+!!!140034.cpp!!!	operator --() : PolygonDyn
+		PolygonDyn *poly_dyn = new PolygonDyn(*this);
+		for(int i=0;i<getSize();++i)
+			point[i].setPoint(point[i].getX()-1,point[i].getY()-1);
+
+		return *poly_dyn;

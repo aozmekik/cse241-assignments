@@ -1,0 +1,7 @@
+class Point2D
+!!!135938.cpp!!!	Point2D(in px : double = 0.0, in py : double = 0.0)
+/* intentionally left blank */
+!!!136194.cpp!!!	getX() : double
+return x;
+!!!136322.cpp!!!	getY() : double
+return y;

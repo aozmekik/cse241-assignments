@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Bouml (http://bouml.free.fr/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="792" height="635" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<ellipse fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" cx="243" cy="39" rx="10" ry="10" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="243" y="63">Shape</text>
+	<line stroke="black" stroke-opacity="1" x1="129" y1="76" x2="357" y2="76" />
+	<line stroke="black" stroke-opacity="1" x1="129" y1="84" x2="357" y2="84" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="133" y="98">+</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="151" y="98">double area() </text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="133" y="123">+</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="151" y="123">double perimeter() </text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="133" y="148">+</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="151" y="148">int compareTo(Shape other) </text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="133" y="173">+</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="151" y="173">void increment() </text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="133" y="198">+</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="151" y="198">void decrement() </text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="133" y="223">+</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="151" y="223">void draw(Graphics g) </text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="425" y="363" width="3" height="259" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="325" y="619" width="103" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="321" y="359" width="104" height="260" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="373" y="373">Rectangle</text>
+	<line stroke="black" stroke-opacity="1" x1="321" y1="386" x2="425" y2="386" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="325" y="400">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="343" y="400">width</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="325" y="425">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="343" y="425">height</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="325" y="450">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="343" y="450">x</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="325" y="475">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="343" y="475">y</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="325" y="500">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="343" y="500">rotate</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="325" y="525">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="343" y="525">fill</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="325" y="550">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" text-decoration="underline" x="343" y="550">total_area</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="325" y="575">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" text-decoration="underline" x="343" y="575">total_perim</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="723" y="52" width="3" height="85" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="589" y="134" width="137" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="585" y="48" width="138" height="86" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="654" y="62">ComposedShape</text>
+	<line stroke="black" stroke-opacity="1" x1="585" y1="75" x2="723" y2="75" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="589" y="89">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="607" y="89">_x</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="589" y="114">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="607" y="114">_y</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="185" y="361" width="3" height="261" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="85" y="619" width="103" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="81" y="357" width="104" height="262" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="133" y="371">Triangle</text>
+	<line stroke="black" stroke-opacity="1" x1="81" y1="384" x2="185" y2="384" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="85" y="398">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="103" y="398">length</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="85" y="423">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="103" y="423">x</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="85" y="448">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="103" y="448">y</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="85" y="473">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="103" y="473">rotate</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="85" y="498">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="103" y="498">fill</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="85" y="523">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" text-decoration="underline" x="103" y="523">total_area</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="85" y="548">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" text-decoration="underline" x="103" y="548">total_perim</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="85" y="573">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="103" y="573">xPoints</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="85" y="598">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="103" y="598">yPoints</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="522" y="364" width="3" height="61" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="456" y="422" width="69" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="452" y="360" width="70" height="62" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" font-style="italic" text-anchor="middle" x="487" y="374">Polygon</text>
+	<line stroke="black" stroke-opacity="1" x1="452" y1="387" x2="522" y2="387" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="456" y="401">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="474" y="401">size</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="309" y="363" width="3" height="259" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="205" y="619" width="107" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="201" y="359" width="108" height="260" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="255" y="373">Circle</text>
+	<line stroke="black" stroke-opacity="1" x1="201" y1="386" x2="309" y2="386" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="205" y="400">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="223" y="400">radius</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="205" y="425">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="223" y="425">x</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="205" y="450">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="223" y="450">y</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="205" y="475">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="223" y="475">fill</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="205" y="500">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" text-decoration="underline" x="223" y="500">total_area</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="205" y="525">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" text-decoration="underline" x="223" y="525">total_perim</text>
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="#000000" stroke-opacity="1" x1="251" y1="358" x2="246" y2="240" />
+	<line stroke="#000000" stroke-opacity="1" x1="246" y1="235" x2="240" y2="241" />
+	<line stroke="#000000" stroke-opacity="1" x1="246" y1="235" x2="252" y2="240" />
+	<line stroke="#000000" stroke-opacity="1" x1="240" y1="241" x2="252" y2="240" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="357" y1="120" x2="363" y2="125" />
+	<line stroke="black" stroke-opacity="1" x1="357" y1="120" x2="362" y2="113" />
+	<line stroke="black" stroke-opacity="1" x1="584" y1="98" x2="357" y2="120" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="#000000" stroke-opacity="1" x1="584" y1="98" x2="362" y2="119" />
+	<line stroke="#000000" stroke-opacity="1" x1="357" y1="120" x2="363" y2="125" />
+	<line stroke="#000000" stroke-opacity="1" x1="357" y1="120" x2="362" y2="113" />
+	<line stroke="#000000" stroke-opacity="1" x1="363" y1="125" x2="362" y2="113" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="357" y1="120" x2="363" y2="125" />
+	<line stroke="black" stroke-opacity="1" x1="357" y1="120" x2="362" y2="113" />
+	<line stroke="black" stroke-opacity="1" x1="584" y1="98" x2="357" y2="120" />
+</g>
+<g>
+	<line stroke="black" stroke-opacity="1" x1="357" y1="120" x2="363" y2="125" />
+	<line stroke="black" stroke-opacity="1" x1="357" y1="120" x2="362" y2="113" />
+	<line stroke="black" stroke-opacity="1" x1="584" y1="98" x2="357" y2="120" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="#000000" stroke-opacity="1" x1="457" y1="359" x2="345" y2="239" />
+	<line stroke="#000000" stroke-opacity="1" x1="341" y1="235" x2="340" y2="243" />
+	<line stroke="#000000" stroke-opacity="1" x1="341" y1="235" x2="349" y2="235" />
+	<line stroke="#000000" stroke-opacity="1" x1="340" y1="243" x2="349" y2="235" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="#000000" stroke-opacity="1" x1="174" y1="356" x2="208" y2="240" />
+	<line stroke="#000000" stroke-opacity="1" x1="210" y1="235" x2="202" y2="239" />
+	<line stroke="#000000" stroke-opacity="1" x1="210" y1="235" x2="214" y2="242" />
+	<line stroke="#000000" stroke-opacity="1" x1="202" y1="239" x2="214" y2="242" />
+</g>
+<g>
+	<line stroke-dasharray="4,4" stroke="#000000" stroke-opacity="1" x1="326" y1="358" x2="282" y2="240" />
+	<line stroke="#000000" stroke-opacity="1" x1="280" y1="235" x2="276" y2="242" />
+	<line stroke="#000000" stroke-opacity="1" x1="280" y1="235" x2="287" y2="238" />
+	<line stroke="#000000" stroke-opacity="1" x1="276" y1="242" x2="287" y2="238" />
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="774" y="285" width="3" height="61" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="570" y="343" width="207" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="566" y="281" width="208" height="62" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="670" y="295">PolygonDyn</text>
+	<line stroke="black" stroke-opacity="1" x1="566" y1="308" x2="774" y2="308" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="570" y="322">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="588" y="322">Polygon.Point2D[] point</text>
+</g>
+<g>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="776" y="461" width="3" height="61" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="570" y="519" width="209" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="566" y="457" width="210" height="62" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="671" y="471">PolygonVect</text>
+	<line stroke="black" stroke-opacity="1" x1="566" y1="484" x2="776" y2="484" />
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" font-weight="bold" x="570" y="498">-</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="588" y="498">&lt;&lt;ArrayList&gt;&gt;</text>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="697" y="498">point</text>
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="611" y1="456" x2="531" y2="414" />
+	<line stroke="#000000" stroke-opacity="1" x1="526" y1="412" x2="528" y2="420" />
+	<line stroke="#000000" stroke-opacity="1" x1="526" y1="412" x2="534" y2="409" />
+	<line stroke="#000000" stroke-opacity="1" x1="528" y1="420" x2="534" y2="409" />
+</g>
+<g>
+	<line stroke="#000000" stroke-opacity="1" x1="591" y1="347" x2="531" y2="372" />
+	<line stroke="#000000" stroke-opacity="1" x1="526" y1="375" x2="533" y2="378" />
+	<line stroke="#000000" stroke-opacity="1" x1="526" y1="375" x2="529" y2="367" />
+	<line stroke="#000000" stroke-opacity="1" x1="533" y1="378" x2="529" y2="367" />
+</g>
+<g>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="466" y="140">[]</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="381" y="100">small</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="451" y="93">main</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="12" fill="#000000" xml:space="preserve" x="378" y="143">inner_shape</text>
+</g>
+</svg>

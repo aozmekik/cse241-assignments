@@ -1,0 +1,107 @@
+class Rectangle
+!!!139522.java!!!	Rectangle(in w : double, in h : double)
+	 	if(w<=0) 
+	 		throw new BadSize();
+
+		width = w;
+		height = h;
+		x = 0;
+		y = 0;
+		rotate = false;
+		fill = true;
+		total_area += area();
+		total_perim += perimeter();
+!!!139650.java!!!	Rectangle(in w : double, in h : double, in posx : double, in posy : double)
+		this(w,h);
+		x = posx;
+		y = posy;
+!!!139778.java!!!	area() : double
+		return (width*height);
+!!!139906.java!!!	perimeter() : double
+		return (width+height)*2.0;
+!!!140034.java!!!	compareTo(inout other : Shape) : int
+		
+		return Double.compare(area(),other.area()); 
+
+!!!140162.java!!!	increment() : void
+		setPosition(getX()+1,getY()+1);
+!!!140290.java!!!	decrement() : void
+		setPosition(getX()-1,getY()-1);
+!!!140418.java!!!	draw(inout g : Graphics) : void
+		// copy the Graphics object so that changes in this context
+		// will not effect outside.
+		Graphics copy = g.create();
+		double x = getX();
+		double y = getY();
+
+
+		if(getRotate()) // rotate by 90 degrees.
+		{
+			// downcasting to Graphics2D for to use rotate() method.
+			Graphics2D g2d = (Graphics2D) copy;
+			g2d.rotate(Math.toRadians(-90),x,y);
+			x -= getWidth(); // for exact fit.
+			y -= getHeight();
+		}
+
+
+		if(getFill())
+			copy.fillRect((int)x,(int)y,(int)getWidth(),(int)getHeight());
+
+		((Graphics2D)copy).setStroke(new BasicStroke(1));
+		copy.setColor(Color.BLACK);
+		copy.drawRect((int)x,(int)y,(int)getWidth(),(int)getHeight());
+
+		copy.dispose(); // getting rid of from the copy.
+!!!140546.java!!!	getWidth() : double
+		return width;
+!!!140674.java!!!	getHeight() : double
+	 	return height;
+!!!140802.java!!!	getX() : double
+	 	return x;
+!!!140930.java!!!	getY() : double
+	 	return y;
+!!!141058.java!!!	getRotate() : boolean
+	 	return rotate;
+!!!141186.java!!!	getFill() : boolean
+	 	return fill;
+!!!141314.java!!!	setWidth(in w : double) : void
+	 	if(w<=0) 
+	 		throw new BadSize();
+
+	 	width = w;
+!!!141442.java!!!	setHeight(in h : double) : void
+	 	if(h<=0) 
+	 		throw new BadSize();
+	 	
+	 	height = h;
+!!!141570.java!!!	setRotate(inout r : boolean) : void
+ 
+	 	rotate = r;
+!!!141698.java!!!	setFill(inout f : boolean) : void
+	 	fill = f;		 	
+!!!141826.java!!!	setPosition(in posx : double, in posy : double) : void
+	 	x = posx;
+	 	y = posy;		 	
+!!!141954.java!!!	swapEdges() : void
+	 	// basic swaping operation
+	 	try
+	 	{
+	 		double temp;
+			temp = getWidth();
+			setWidth(getHeight());
+			setHeight(temp);
+	 	}
+	 	catch(BadSize b)
+	 	{/* intentionally left blank*/}
+		
+!!!142082.java!!!	getTotalArea() : double
+	 	return total_area;
+!!!142210.java!!!	getTotalPerim() : double
+	 	return total_perim;
+!!!142338.java!!!	finalize() : void
+    	total_area -= area();
+    	total_perim -= perimeter();
+
+!!!142466.java!!!	clone() : Object
+    	return super.clone();

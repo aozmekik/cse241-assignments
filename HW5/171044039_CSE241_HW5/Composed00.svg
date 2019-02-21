@@ -1,0 +1,61 @@
+<svg version="1.1"
+baseProfile="full"
+width="600" height="500" xmlns="http://www.w3.org/2000/svg">
+<rect width="600" height="500" y="0" x="0" stroke="black" stroke-width="1.6" fill="white"/>/>
+<circle cx="34" cy="34" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="102" cy="34" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="170" cy="34" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="238" cy="34" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="306" cy="34" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="374" cy="34" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="442" cy="34" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="510" cy="34" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="34" cy="102" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="102" cy="102" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="170" cy="102" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="238" cy="102" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="306" cy="102" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="374" cy="102" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="442" cy="102" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="510" cy="102" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="34" cy="170" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="102" cy="170" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="170" cy="170" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="238" cy="170" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="306" cy="170" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="374" cy="170" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="442" cy="170" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="510" cy="170" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="34" cy="238" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="102" cy="238" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="170" cy="238" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="238" cy="238" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="306" cy="238" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="374" cy="238" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="442" cy="238" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="510" cy="238" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="34" cy="306" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="102" cy="306" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="170" cy="306" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="238" cy="306" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="306" cy="306" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="374" cy="306" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="442" cy="306" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="510" cy="306" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="34" cy="374" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="102" cy="374" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="170" cy="374" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="238" cy="374" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="306" cy="374" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="374" cy="374" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="442" cy="374" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="510" cy="374" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="34" cy="442" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="102" cy="442" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="170" cy="442" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="238" cy="442" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="306" cy="442" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="374" cy="442" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="442" cy="442" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<circle cx="510" cy="442" r="34" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+ </svg>

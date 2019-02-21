@@ -1,0 +1,23 @@
+class Circle
+!!!128258.cpp!!!	getRadius() : double
+return radius;
+!!!128386.cpp!!!	getFill() : bool
+return fill;
+!!!128514.cpp!!!	getX() : double
+return x;
+!!!128642.cpp!!!	getY() : double
+return y;
+!!!129154.cpp!!!	operator ++() : Circle
+
+		Circle *circle = new Circle(*this); 
+
+		setPosition(getX()+1,getY()+1); /* update this */
+
+		return *circle;
+!!!129410.cpp!!!	operator --() : Circle
+
+		Circle *circle = new Circle(*this); 
+
+		setPosition(getX()-1,getY()-1); /* update this */
+		
+		return *circle;

@@ -1,0 +1,14 @@
+<svg version="1.1"
+baseProfile="full"
+width="600" height="1000"
+ xmlns="http://www.w3.org/2000/svg">
+<rect width="500" height="900" y="0" x="0" stroke="black" stroke-width="1.6" fill="white"/>
+
+<rect width="300" height="200" y="0" x="0" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<rect width="300" height="200" y="200" x="0" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<rect width="300" height="200" y="400" x="0" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<rect width="300" height="200" y="600" x="0" stroke="black" stroke-width="1.6" fill="cornflowerblue"/>
+<rect width="300" height="200" y="0" x="500" stroke="black" stroke-width="1.6" fill="cornflowerblue" transform = " rotate(90,500,0)"/>
+<rect width="300" height="200" y="300" x="500" stroke="black" stroke-width="1.6" fill="cornflowerblue" transform = " rotate(90,500,300)"/>
+<rect width="300" height="200" y="600" x="500" stroke="black" stroke-width="1.6" fill="cornflowerblue" transform = " rotate(90,500,600)"/>
+ </svg>
